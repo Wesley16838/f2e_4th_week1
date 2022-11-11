@@ -1,0 +1,45 @@
+@import 'variables';
+
+// RWD
+@mixin mobile {
+    @media (min-width: #{$BREAKPOINT_MOBILE}) {
+      @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$BREAKPOINT_TABLET}){
+      @content;
+    }
+}
+  
+@mixin desktop-regular {
+  @media (min-width: #{$BREAKPOINT_DESKTOP}) {
+    @content;
+  }
+}
+
+@mixin onlytablet {
+    @media (min-width: #{$BREAKPOINT_TABLET}) and (max-width: #{$BREAKPOINT_DESKTOP - 1px}){
+      @content;
+    }
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin flex-justify($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}

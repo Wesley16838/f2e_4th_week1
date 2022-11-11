@@ -1,0 +1,39 @@
+.profile-image {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+}
+.side-nav {
+    width: 155px;
+    height: 100vh;
+    padding-top: 40px;
+    background-color: $primary;
+    position: fixed;
+    z-index: 4;
+    gap: 40px;
+    transition: 0.5s;
+    @include flex-align(column, center);
+    .nav-item {
+        color: $secondary;
+        text-decoration: none;
+        line-height: 28px;
+        gap: 4px;
+        display: block;
+        transition: 0.3s;
+        @include flex-align(column, center);
+    }
+}
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    z-index: 4;
+    background: transparent;
+    border: none;
+    padding: 0px;
+    transition: 0.5s;
+}

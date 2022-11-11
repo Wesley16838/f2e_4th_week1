@@ -1,0 +1,96 @@
+.header {
+    position: relative;
+    height: 150vh;
+    z-index: 3;
+    @include flex-align(column, center);
+}
+
+.logotext {
+    position: fixed;
+    width: 680px;
+    top: 44px;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.start-image {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.header-title {
+    position: fixed;
+    color: $white;
+    background-color: $highlight;
+    padding: 8px 40px;
+    border-radius: 100px;
+    top: 268px;
+    z-index: 2;
+    transition: all 0.5s ease;
+    h1 {
+        margin: 0px;
+    }
+}
+
+.category-wrapper {
+    position: fixed;
+    top: 371px;
+    width: 1196px;
+    @include flex-justify(row, space-evenly)
+}
+
+.category-container {
+    gap: 8px;
+    transition: all 0.5s ease;
+    @include flex-center(column);
+    h5 {
+        margin: 0px;
+    }
+}
+
+.category-title {
+    color: $primary;
+}
+
+.category-group {
+    gap: 12px;
+    background-color: $primary;
+    padding: 4px 28px;
+    border-radius: 40px;
+    h5 {
+        margin: 0px;
+        line-height: 33px;
+    }
+    @include flex-center(row);
+}
+
+.category-subtitle{
+    color: $white;
+}
+
+.left-cloud {
+    position: fixed;
+    top: 50%;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.right-cloud {
+    position: fixed;
+    top: 50%;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.state-light {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    z-index: 2;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}

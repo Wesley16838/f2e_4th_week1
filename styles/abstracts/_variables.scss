@@ -1,0 +1,26 @@
+/// Color
+/// @type Color
+$primary: #007FAB;
+$primary_dark: #003A4F;
+$primary_tint: #B0D2DE;
+
+$secondary: #FFC37D;
+$secondary_dark: #A46039;
+$secondary_tint: #FFE2A9;
+
+$highlight: #FF5136;
+$highlight_dark: #CD331A;
+$highlight_tint: #FFB5A4;
+
+$black: #000000;
+$gray_20: #333333;
+$gray_40: #666666;
+$gray_60: #999999;
+$gray_80: #CCCCCC;
+$white: #FFFFFF;
+
+/// Break-Point
+/// @type Length
+$BREAKPOINT_DESKTOP: 1920px;
+$BREAKPOINT_TABLET: 768px;
+$BREAKPOINT_MOBILE: 375px;
