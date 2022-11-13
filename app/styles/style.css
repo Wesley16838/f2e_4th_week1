@@ -415,18 +415,68 @@ p {
   transition: 0.5s;
 }
 
+.section-title {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+.section-subtitle {
+  position: fixed;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+  margin: 0px;
+  color: #A46039;
+}
+
+.questions-wrapper {
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.questions-wrapper .question {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.buttons-wrapper {
+  width: 1196px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttons-wrapper .buttons {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
 .main {
   position: relative;
   background-color: #FFC37D;
-  height: 300vh;
+  height: 400vh;
 }
 
 .animation-wrapper {
   position: fixed;
   bottom: 0px;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 2;
+  transform: translateX(-50%);
+  transform-origin: 0% 100%;
+  transition: all 0.5s ease;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -453,6 +503,8 @@ p {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  transform-origin: 0% 100%;
+  transition: all 0.5s ease;
 }
 
 .join-btn-wrapper {

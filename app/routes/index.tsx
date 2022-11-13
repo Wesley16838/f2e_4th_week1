@@ -9,10 +9,16 @@ import btn_join_hand from "~/assets/images/btn_join_hand.png";
 import map from "~/assets/images/map.svg";
 import map_now from "~/assets/images/map_now.gif";
 import logo from "~/assets/images/logo.png";
+import SectionOne from "~/layouts/Section/section_one";
+import SectionTwo from "~/layouts/Section/section_two";
 
 export default function Index() {
   const [logoImg, setLogoImg] = useState<any>({
     opacity: "0"
+  })
+
+  const [animation, setAnimation] = useState<any>({
+    scale: "1"
   })
 
   const handleOnScroll = useCallback((e:Event) => {
@@ -30,6 +36,25 @@ export default function Index() {
       return () => window.removeEventListener("scroll", handleOnScroll);
   }, [])
 
+  const handleOnAnimationScroll = (e:Event) => {
+    const window = e.currentTarget as Window;
+    const currentPosition = window.scrollY;
+    if(currentPosition < 1100) {
+      setAnimation({
+        scale: "1"
+      })
+    } else {
+      setAnimation({
+        scale: "0.6"
+      })
+    }
+  }
+
+  useEffect(()=> {
+    window.addEventListener("scroll", handleOnAnimationScroll);
+    return () => window.removeEventListener("scroll", handleOnAnimationScroll);
+}, [])
+
   return (
     <div className="main">
       <img src={logo} className="logo" style={logoImg}/>
@@ -45,12 +70,14 @@ export default function Index() {
         <img src={map_now} className="map-now"/>
       </div>
       <Header />
-      <div className="animation-wrapper">
-        <img src={dog} className="animation-image"/>
+      <SectionOne />
+      <SectionTwo />
+      <div className="animation-wrapper" style={animation}>
+        <img src={dog} className="animation-image" />
         <img src={cat} className="animation-image"/>
         <img src={pig} className="animation-image"/>
       </div>
-      <img src={road} className="road-image"/>
+      <img src={road} className="road-image" style={animation}/>
     </div>
   );
 }

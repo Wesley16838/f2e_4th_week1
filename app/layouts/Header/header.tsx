@@ -28,11 +28,13 @@ const Header = () => {
     });
     const [leftcloud, setLeftCloud] = useState<any>({
         left: "10%",
-        transform: "translateY(-50%) scale(1)"
+        transform: "translateY(-50%) scale(1)",
+        opacity: "1"
     });
     const [rightcloud, setRightCloud] = useState<any>({
         right: "10%",
-        transform: "translateY(-50%) scale(1)"
+        transform: "translateY(-50%) scale(1)",
+        opacity: "1"
     });
 
     const handleOnScroll = useCallback((e:Event) => {

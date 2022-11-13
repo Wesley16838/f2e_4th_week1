@@ -1,15 +1,17 @@
 .main {
     position: relative;
     background-color: $secondary;
-    height: 300vh;
+    height: 400vh;
 }
 
 .animation-wrapper {
     position: fixed;
     bottom: 0px;
     left: 50%;
-    transform: translateX(-50%);
     z-index: 2;
+    transform: translateX(-50%);
+    transform-origin: 0% 100%;
+    transition: all 0.5s ease;
     @include flex-justify(row, space-between);
     .animation-image {
         object-fit:contain;
@@ -34,6 +36,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    transform-origin: 0% 100%;
+    transition: all 0.5s ease;
 }
 
 .join-btn-wrapper {
